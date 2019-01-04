@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import logo from "./logo.svg";
 import "./App.css";
 
 import { simpleAction } from "./actions/simple-action";
@@ -14,25 +13,19 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <div style={{textAlign: 'left'}}>
+            <button onClick={this.simpleAction}>Load Movies</button>
+            <ul>
+              {
+                this.props.simpleReducer.map(movie => {
+                  return (
+                    <li key={movie.episode_id}>{ movie.title }</li>
+                  )
+                })
+              }
+            </ul>
+          </div>
         </header>
-        <button onClick={this.simpleAction}>Test redux action</button>
-        <pre>
-        {
-          JSON.stringify(this.props, null, 2)
-        }
-        </pre>
       </div>
     );
   }
