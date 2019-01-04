@@ -1,3 +1,9 @@
+# React Interview App
+
+This project is intended to be part of a coding challenge for certain React developer interviews.
+
+## Create-react-app README
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
