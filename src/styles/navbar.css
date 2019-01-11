@@ -1,0 +1,13 @@
+.navbar {
+
+}
+.navbar__list {
+    display: flex;
+}
+.navbar__list-item {
+    list-style: none;
+}
+.navbar__list-item-link {
+    color: #fff;
+    text-decoration: none;
+}
